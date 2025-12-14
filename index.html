@@ -2,13 +2,16 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to /apy</title>
-    <!-- 立即跳转（0秒延迟） -->
-    <meta http-equiv="refresh" content="0; URL=/apy">
+    <title>跳转中...</title>
 </head>
 <body>
-    <p>正在跳转至服务器状态页面... 如果没有自动跳转，请点击 <a href="/apy">这里</a></p>
+    <script>
+        // 强制跳转到apy子路径，兼容所有浏览器
+        window.location.href = './main.html';
+        // 兜底方案，防止JS执行延迟
+        setTimeout(() => {
+            window.location.replace('./main.html');
+        }, 500);
+    </script>
 </body>
 </html>
