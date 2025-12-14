@@ -41,7 +41,7 @@
                 statusEl.classList.remove('loading');
                 // 读取time.json的恢复时间
                 try {
-                    const timeRes = await fetch('https://mtfsf.github.io/time.json');
+                    const timeRes = await fetch('https://mtfsf.github.io/apy/time.json');
                     const timeData = await timeRes.json();
                     statusEl.textContent = `主站维护中，预计恢复时间：${timeData.recoveryTime} / Main site under maintenance, expected recovery time: ${timeData.recoveryTime}`;
                 } catch (timeErr) {
